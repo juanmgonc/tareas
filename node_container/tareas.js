@@ -13,6 +13,10 @@ function query(query, res) {
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/home', function(req, res) {
+  res.send('Bienvenido!');
+});
+
 app.get('/tareas', function(req, res) {
   query('SELECT * FROM tarea', res);
 });
@@ -21,6 +25,6 @@ app.get('/tareas/:id_tarea', function(req, res) {
   res.send('¡Te devuelvo la tarea ' + req.params.id_tarea + '!');
 });
 
-app.listen(3000, function() {
+app.listen(8080, function() {
   console.log('Iniciado el server correctamente');
 });

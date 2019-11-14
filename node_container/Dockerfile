@@ -12,7 +12,7 @@ RUN apt-get update && \
 WORKDIR /usr/src/app
 
 #Lleva todos los archivos al directorio de trabajo
-COPY . .
+COPY . /usr/src/app
 
 #Ejecuta npm para instalar todas las dependencias del proyecto
 RUN npm install
