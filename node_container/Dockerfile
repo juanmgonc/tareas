@@ -22,5 +22,5 @@ EXPOSE 8080
 
 #Define que ejecuta la linea de comando, en este caso ejecuta nuestra
 #aplicacion servidor.js
-CMD ["node", "servidor.js"]
+CMD ["node", "tareas.js"]
 
