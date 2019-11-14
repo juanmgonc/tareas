@@ -6,6 +6,7 @@ const app = express();
 
 function query(query, res) {
   connection.query(query, function(err, results, fields) {
+    if (err) { console.log(err); }
     res.send(results);
   });
 }
